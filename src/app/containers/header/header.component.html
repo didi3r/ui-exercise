@@ -1,0 +1,15 @@
+<header class="header">
+  <div class="header__brand">
+    <app-icon-button class="header__menu-icon" icon="menu" (click)="onClick()"></app-icon-button>
+    <img src="assets/img/gmail_logo.png" class="header__logo-image ml-2 d-none d-md-inline-block" alt="Gmail" />
+    <img src="assets/img/gmail_logo_small.png" class="header__logo-image--small ml-2 d-md-none" alt="Gmail" />
+  </div>
+  <div class="d-flex flex-grow-1">
+    <div class="pt-2 flex-grow-1">
+      <app-search-input class="header__search"></app-search-input>
+    </div>
+    <div class="d-flex justify-content-end">
+      <app-settings class="header__settings"></app-settings>
+    </div>
+  </div>
+</header>

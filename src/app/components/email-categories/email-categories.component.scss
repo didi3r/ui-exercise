@@ -1,0 +1,65 @@
+@import './../../../scss/colors';
+
+:host {
+  display: block;
+}
+
+.email-categories {
+  position: relative;
+  max-height: 100%;
+  overflow-x: visible;
+  overflow-y: scroll;
+  left: -16px;
+
+  &__category-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__category-item {
+    font-size: 13px;
+    color: $gray;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-left: 32px;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: $font;
+      width: 100%;
+    }
+
+    i {
+      position: relative;
+      top: 3px;
+      margin-right: 16px;
+    }
+
+    span {
+      position: relative;
+      top: -5px;
+    }
+
+    &:hover,
+    &.active {
+      font-weight: 500;
+      background: $gray-bg;
+    }
+
+    &--highlight {
+      color: $red;
+
+      a {
+        color: $red;
+      }
+
+      &:hover,
+      &.active {
+        background: $red-bg;
+      }
+    }
+  }
+}

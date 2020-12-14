@@ -1,0 +1,25 @@
+<section class="email-list">
+  <div class="email-list__toolbar">
+    <app-checkbox
+      class="mr-2"
+      [checked]="!!selected.length"
+      [indeterminate]="selected.length !== total"
+      (onCheck)="checkAll($event)"
+    ></app-checkbox>
+    <app-icon-button icon="refresh" size="small" *ngIf="!selected.length"></app-icon-button>
+    <app-icon-button icon="more_vert" size="small" *ngIf="!selected.length"></app-icon-button>
+
+    <app-icon-button icon="delete" size="small" *ngIf="!!selected.length" (click)="delete()"></app-icon-button>
+  </div>
+
+  <div class="email-list__list">
+    <app-email-item
+      *ngFor="let email of emails | filterByTag: tag"
+      [email]="email"
+      [selected]="isSelected(email.id)"
+      (onSelect)="select($event)"
+      (onDeselect)="deselect($event)"
+    >
+    </app-email-item>
+  </div>
+</section>

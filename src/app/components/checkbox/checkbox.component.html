@@ -1,0 +1,4 @@
+<label class="checkbox" [class.checkbox--checked]="checked" [class.checkbox--indeterminate]="indeterminate">
+  <input type="checkbox" [checked]="checked" (click)="onClick($event)" />
+  <span>{{ label }}</span>
+</label>

@@ -1,0 +1,43 @@
+@import './../../../scss/colors';
+
+:host {
+  display: block;
+}
+
+.side-bar {
+  padding: 16px 8px 4px 4px;
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    left: -16px;
+  }
+
+  &__menu-item {
+    font-size: 13px;
+    color: $gray;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-left: 32px;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+    i {
+      position: relative;
+      top: 3px;
+      margin-right: 16px;
+    }
+
+    span {
+      position: relative;
+      top: -5px;
+    }
+
+    &:hover,
+    &.active {
+      font-weight: 500;
+      background: $gray-bg;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import './../../../scss/colors';
+
+:host {
+  display: inline-block;
+}
+
+.icon-button {
+  border: 0;
+  background-color: transparent;
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  outline: 0;
+
+  &:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+  }
+
+  &__icon {
+    position: relative;
+    top: 2px;
+    color: $gray;
+  }
+
+  // Modifiers
+  &--small {
+    width: 40px;
+    height: 40px;
+  }
+
+  &--large {
+    width: 56px;
+    height: 56px;
+  }
+}

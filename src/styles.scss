@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import './scss/colors';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $font;
+}
+
+.font-light {
+  color: $font-light;
+}
+
+.divider {
+  display: block;
+  height: 0;
+  width: 100%;
+  border-top: 1px solid $divider;
+}

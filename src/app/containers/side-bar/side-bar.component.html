@@ -1,0 +1,33 @@
+<section class="side-bar">
+  <app-compose-button></app-compose-button>
+  <div class="d-flex flex-column mt-3">
+    <div>
+      <app-email-categories
+        [categories]="(categories$ | async) || []"
+        [tags]="(tags$ | async) || []"
+      ></app-email-categories>
+      <hr class="divider" />
+    </div>
+    <div>
+      <h6 class="pl-3">Meet</h6>
+      <ul class="side-bar__menu">
+        <li class="side-bar__menu-item"><i class="material-icons">videocam</i> <span>New meeting</span></li>
+        <li class="side-bar__menu-item"><i class="material-icons">today</i> <span>My meetings</span></li>
+      </ul>
+      <hr class="divider" />
+    </div>
+    <div>
+      <h6 class="pl-3 mb-3">Hangouts</h6>
+      <ul class="side-bar__menu">
+        <li class="side-bar__menu-item d-flex">
+          <img class="rounded-circle" src="assets/img/profile_picture.png" alt="John Doe" style="width: 40px" />
+          <span class="ml-2 pt-3">John Doe</span>
+        </li>
+        <li class="side-bar__menu-item d-flex">
+          <img class="rounded-circle" src="assets/img/profile_picture.png" alt="Jane Doe" style="width: 40px" />
+          <span class="ml-2 pt-3">Jane Doe</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

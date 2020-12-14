@@ -1,0 +1,12 @@
+@import './../../../scss/colors';
+
+:host {
+  display: inline-block;
+}
+
+.settings {
+  &__menu {
+    position: relative;
+    top: -5px;
+  }
+}

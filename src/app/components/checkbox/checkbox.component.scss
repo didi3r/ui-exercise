@@ -1,0 +1,69 @@
+:host {
+  display: inline-block;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.checkbox {
+  position: relative;
+  cursor: pointer;
+  top: -3px;
+  margin: 0 8px;
+
+  input {
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+    left: 3px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid #666;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &::after {
+    z-index: 1;
+    content: '';
+    display: none;
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    width: 10px;
+    height: 5px;
+    border: solid 2px #fff;
+    border-right: none;
+    border-top: none;
+    transform: translate(3px, 4px) rotate(-45deg);
+  }
+
+  &--indeterminate {
+    &::after {
+      border: none;
+      transform: none;
+      border-bottom: 2px solid #fff;
+      width: 12px;
+      top: 6px;
+      left: 4px;
+    }
+  }
+
+  &--checked {
+    &::before {
+      background-color: #666;
+    }
+
+    &::after {
+      display: block;
+    }
+  }
+}

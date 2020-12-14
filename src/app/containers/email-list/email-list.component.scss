@@ -1,0 +1,17 @@
+@import './../../../scss/colors';
+
+:host {
+  display: block;
+}
+
+.email-list {
+  &__toolbar {
+    padding: 8px 0;
+    border-bottom: 1px solid $divider;
+  }
+
+  &_list {
+    overflow: hidden;
+    overflow-x: auto;
+  }
+}

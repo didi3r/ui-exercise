@@ -1,0 +1,21 @@
+@import './../../../scss/colors';
+
+:host {
+  display: inline-block;
+}
+
+.button {
+  background-color: transparent;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid $gray-border;
+
+  &:hover {
+    background-color: $gray-bg;
+  }
+
+  &--rounded {
+    border-radius: 30px;
+  }
+}

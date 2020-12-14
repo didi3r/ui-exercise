@@ -1,0 +1,24 @@
+<div class="email-categories">
+  <ul class="email-categories__category-list" *ngIf="!!categories?.length">
+    <li
+      *ngFor="let category of categories"
+      class="email-categories__category-item"
+      routerLinkActive="active"
+      [class.email-categories__category-item--highlight]="category.highlight"
+    >
+      <a href="" [routerLink]="category.route" *ngIf="category.route; else NoRoute">
+        <i class="material-icons">{{ category.icon }}</i> <span>{{ category.label }}</span>
+      </a>
+      <ng-template #NoRoute>
+        <i class="material-icons">{{ category.icon }}</i> <span>{{ category.label }}</span>
+      </ng-template>
+    </li>
+  </ul>
+  <ul class="email-categories__category-list" *ngIf="!!tags?.length">
+    <li *ngFor="let tag of tags" class="email-categories__category-item" routerLinkActive="active">
+      <a href="" [routerLink]="'/inbox/' + tag">
+        <i class="material-icons" [style.color]="getTagColor(tag)">label</i> <span>{{ tag }}</span>
+      </a>
+    </li>
+  </ul>
+</div>

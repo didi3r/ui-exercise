@@ -1,0 +1,27 @@
+[
+  {
+    "id": "INBOX",
+    "label": "Inbox",
+    "route": "/inbox/all",
+    "icon": "inbox",
+    "highlight": true
+  },
+  {
+    "id": "SENT",
+    "label": "Sent",
+    "icon": "send",
+    "highlight": false
+  },
+  {
+    "id": "DRAFT",
+    "label": "Draft",
+    "icon": "insert_drive_file",
+    "highlight": false
+  },
+  {
+    "id": "TRASH",
+    "label": "Trash",
+    "icon": "delete",
+    "highlight": false
+  }
+]

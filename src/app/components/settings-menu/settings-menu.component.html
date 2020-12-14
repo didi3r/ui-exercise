@@ -1,0 +1,28 @@
+<div class="settings-menu" (click)="onClick()">
+  <img class="settings-menu__logo d-none d-md-inline-block" src="assets/img/google_logo.png" alt="Google" />
+  <img
+    class="settings-menu__profile-picture rounded-circle"
+    src="assets/img/profile_picture.png"
+    alt="Profile Picture"
+  />
+</div>
+
+<div class="settings-popover" *ngIf="opened" (clickOutside)="onClickOutside()">
+  <img
+    class="settings-popover__profile-picture rounded-circle"
+    src="assets/img/profile_picture.png"
+    alt="Profile Picture"
+  />
+  <div>
+    <strong>John Doe</strong><br />
+    <span class="font-light">john.doe@gmail.com</span><br />
+
+    <app-button class="mt-3" variant="rounded">Manage your Google Account</app-button>
+
+    <hr class="divider" />
+    <app-button>Sign Out</app-button>
+
+    <hr class="divider" />
+    <span class="settings-popover__legal">Privacy Policy &#8226; Terms of Service</span>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="app">
+  <app-header (menuClicked)="menuOpened = !menuOpened"></app-header>
+
+  <div class="app__content d-flex">
+    <app-side-bar *ngIf="menuOpened" class="app__side-bar flex-grow-0"></app-side-bar>
+    <div class="flex-grow-1 mw-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

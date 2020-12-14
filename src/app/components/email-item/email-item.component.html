@@ -1,0 +1,23 @@
+<article class="email-item d-flex" [class.email-item--checked]="selected">
+  <app-checkbox
+    class="email-item__checkbox mr-3 flex-grow-0"
+    [checked]="selected"
+    (onCheck)="onChecked($event)"
+  ></app-checkbox>
+  <div class="container-fluid flex-grow-1">
+    <div class="row mw-100">
+      <div class="col-12 col-md-3 d-flex justify-content-between">
+        <span class="email-item__sender">{{ email?.sender }}</span>
+        <span class="email-item__date d-md-none text-right">{{ email?.date | date: 'MMM d, h:mm a' }}</span>
+      </div>
+      <div class="col-12 col-md-6 d-flex flex-row-reverse flex-md-row">
+        <app-badge *ngFor="let tag of email?.tags" [label]="tag" [color]="getTagColor(tag) || ''" class="mr-1">
+        </app-badge>
+        <span class="email-item__subject flex-grow-1">{{ email?.subject }}</span>
+      </div>
+      <div class="col-12 col-md-3 d-none d-md-block">
+        <span class="email-item__date mr-3 text-right">{{ email?.date | date: 'MMM d, h:mm a' }}</span>
+      </div>
+    </div>
+  </div>
+</article>

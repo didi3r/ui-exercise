@@ -1,0 +1,60 @@
+@import './../../../scss/colors';
+
+.header {
+  display: flex;
+  max-height: 62px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $divider;
+
+  &__brand {
+    width: 260px;
+  }
+
+  &__menu-icon {
+    position: relative;
+    top: 8px;
+  }
+
+  &__logo-image {
+    max-width: 110px;
+
+    &--small {
+      max-width: 30px;
+      margin: 0 !important;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  &__search {
+    max-width: 725px;
+  }
+
+  &__settings {
+    margin-top: 12px;
+  }
+}
+
+@media screen and (max-width: 305px) {
+  .header {
+    &__logo-image--small {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .header {
+    &__logo-image--small {
+      max-width: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    &__brand {
+      width: 90px;
+    }
+  }
+}
